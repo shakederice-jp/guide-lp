@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -27,6 +28,18 @@ export default function LockupCountdownPage() {
         売却制限が外れた株主が売却に動くと、株の供給が増えます。需要が変わらなければ、株価が下がりやすくなります。
       </P>
       <P>これは、IPO銘柄に特有の需給面のリスクです。</P>
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 714 }}>
+        <Image
+          src="/chapter2-lockup.png"
+          alt="ロックアップ解除前後の典型的な株価推移を示すグラフ。公募価格を100として指数化し、解除時期にかけて株価が下がる傾向をサンプルデータで例示している"
+          width={714}
+          height={481}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>解除日までの日数をカウントダウン表示</H2>
       <P>

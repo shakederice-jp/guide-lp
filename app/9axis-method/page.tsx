@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { RiskCategoryCard } from "@/components/RiskCard";
 
 export const metadata: Metadata = {
   title: "IPOの9軸分析メソッドとは?AIが多角的に評価する9つの視点|大手町調査室九課",
@@ -61,6 +62,18 @@ export default function NineAxisMethodPage() {
         <Axis label="VCや大株主の売り圧力" desc="ロックアップ解除後、VC・PEなどの既存株主が売却してくる可能性の大きさを見ます。" />
         <Axis label="成長性" desc="売上・利益などの推移から、事業がどう伸びてきたか、伸びしろがどこにあるかを見ます。" />
       </UL>
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 697 }}>
+        <Image
+          src="/axis-detail-short.png"
+          alt="超短期・短期の軸別スコアカードの例。需給の軽さ・ロックアップ・上場タイミングと、バリュエーション・VCや大株主の売り圧力・成長性の評価が表示されている"
+          width={697}
+          height={694}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>長期(数年単位の視点)</H2>
       <UL>
@@ -68,6 +81,18 @@ export default function NineAxisMethodPage() {
         <Axis label="ユニットエコノミクス" desc="売上に対する利益の出方など、事業として利益を生み出す構造を見ます。" />
         <Axis label="競合環境" desc="同業他社と比べた立ち位置や、事業の強み・弱みを見ます。" />
       </UL>
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 616 }}>
+        <Image
+          src="/axis-detail-long.png"
+          alt="長期の軸別スコアカードの例。経営陣・ユニットエコノミクス・競合環境の評価と、有料プラン限定のバリュー・グロースマップが表示されている"
+          width={616}
+          height={711}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <P>
         超短期・短期・長期それぞれの見方は、<InlineLink href="/investment-styles">IPO投資はデイトレ・短期・長期でどう違う?</InlineLink>で詳しくご紹介しています。
@@ -88,18 +113,40 @@ export default function NineAxisMethodPage() {
       <P>
         「買うべき」「買わないほうがいい」といった断定はせず、判断のための材料をお届けすることを心がけています。分析の裏側にある設計の工夫は、<InlineLink href="/ai-reliability">AIが「嘘をつかない」ための設計思想</InlineLink>でご紹介しています。
       </P>
-      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
-        <Image
-          src="/business-risk-categories.png"
-          alt="目論見書の事業等のリスクを技術・セキュリティ、市場・人口動態、資金調達、法的規制、人材・組織のカテゴリ別に整理し、重要度(高・中)を示したカードの例"
-          width={626}
-          height={604}
-          className="h-auto w-full"
-        />
-        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
-          サンプルデータによる例示です
-        </p>
-      </div>
+      <RiskCategoryCard
+        items={[
+          {
+            severity: "高",
+            category: "技術・セキュリティ",
+            title: "システム障害リスク",
+            desc: "基幹システムに障害が発生した場合、サービス停止や信頼低下につながる可能性があります。",
+          },
+          {
+            severity: "高",
+            category: "市場・人口動態",
+            title: "市場成長の不確実性",
+            desc: "想定する市場規模が、法制度や需要動向により計画どおりに拡大しない可能性があります。",
+          },
+          {
+            severity: "中",
+            category: "資金調達",
+            title: "資金調達リスク",
+            desc: "継続的な投資資金の調達に失敗した場合、事業計画の見直しを迫られる可能性があります。",
+          },
+          {
+            severity: "中",
+            category: "法的規制",
+            title: "規制変更リスク",
+            desc: "関連法令が改正された場合、事業運営や収益計画に影響が生じる可能性があります。",
+          },
+          {
+            severity: "中",
+            category: "人材・組織",
+            title: "人材確保リスク",
+            desc: "専門人材の採用が難航した場合、事業拡大のペースに影響する可能性があります。",
+          },
+        ]}
+      />
 
       <H2>9軸のもとになったデータは、無料で確認できます</H2>
       <P>

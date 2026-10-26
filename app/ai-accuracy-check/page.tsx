@@ -51,6 +51,30 @@ export default function AiAccuracyCheckPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
+          src="/price-scenario-short.png"
+          alt="分析ページの株価シナリオ分析(短期)の例。強気・中立・弱気の3パターンを、それぞれの確率とあわせて示している"
+          width={742}
+          height={676}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/price-scenario-long.png"
+          alt="分析ページの株価シナリオ分析(長期)の例。数年先までの強気・中立・弱気の3パターンを、それぞれの確率とあわせて示している"
+          width={754}
+          height={676}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
           src="/scenario-vs-actual.png"
           alt="事前のAIシナリオと上場日終値実績を比べる答え合わせの例。公募価格・初値・上場日終値と公募価格比が並び、「まずここに注目」の見立てと実績が照らし合わされている"
           width={763}

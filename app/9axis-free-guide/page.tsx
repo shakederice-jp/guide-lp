@@ -36,7 +36,7 @@ export default function NineAxisFreeGuidePage() {
       <P>
         9つの軸の詳しい内容は、<InlineLink href="/9axis-method">IPOの9軸分析メソッドとは?</InlineLink>でご紹介しています。
       </P>
-      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 635 }}>
         <Image
           src="/reference-ultra-short.png"
           alt="超短期投資家向け参考資料1の例。IPO条件・資金調達サマリーの表と、需給・VC分析(流動性・ロックアップ・VC売却懸念)のドーナツグラフが、折りたたみなしで表示されている"
@@ -48,7 +48,7 @@ export default function NineAxisFreeGuidePage() {
           サンプルデータによる例示です
         </p>
       </div>
-      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 630 }}>
         <Image
           src="/reference-nine-axis-radar.png"
           alt="短期投資家向け参考資料2の例。9軸それぞれのスコアをレーダーチャートと一覧バーで示したパフォーマンス・レーダーが、折りたたみなしで表示されている"
@@ -60,7 +60,7 @@ export default function NineAxisFreeGuidePage() {
           サンプルデータによる例示です
         </p>
       </div>
-      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 627 }}>
         <Image
           src="/reference-long-term-financials.png"
           alt="長期投資家向け参考資料3の例。売上高・経常利益の推移グラフと、自己資本比率・ROE・PER・PBRなど主要経営指標の推移表が、折りたたみなしで表示されている"

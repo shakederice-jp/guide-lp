@@ -61,6 +61,18 @@ export default function InvestmentStylesPage() {
       <P>
         投資スタイルは、人それぞれです。どのタイプの方でも、9つの視点が判断材料になるよう設計しています。
       </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/deep-analysis-header.png"
+          alt="分析ページのDEEP ANALYSIS見出し。初心者向け・中上級者向けの切り替えと超短期・短期・長期のグループ別スコアに続き、初値で売り抜けたい方・数週間から数ヶ月で利益を取りたい方・数年単位でじっくり育てたい方という投資スタイル診断の案内が表示されている"
+          width={756}
+          height={573}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
       <UL>
         <li>初値で売り抜けたい方</li>
         <li>数週間から数ヶ月で利益を取りたい方</li>
@@ -69,6 +81,18 @@ export default function InvestmentStylesPage() {
       <P>
         長期保有の視点は、<InlineLink href="/deep-dive-3-points">儲けの仕組み・上場ストーリー・競合との違い</InlineLink>の深掘り3要素とも組み合わせてお読みいただけます。
       </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/chapter3-long-term.png"
+          alt="成長株IPOと市場平均の長期リターン比較グラフ。数年単位で保有した場合の伸びしろをサンプルデータで例示している"
+          width={729}
+          height={435}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>まとめ</H2>
       <UL>

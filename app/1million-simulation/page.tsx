@@ -45,6 +45,18 @@ export default function OneMillionSimulationPage() {
       <P>
         分析ページの「追跡開始」ボタンを押すと、その銘柄をマイポートフォリオに登録できます。マイページでは、登録した銘柄をまとめて確認できます。評価額や損益の割合も、あわせて表示します。
       </P>
+      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 712 }}>
+        <Image
+          src="/simulation-100shares.png"
+          alt="分析ページの投資シミュレーション(100株購入の場合)の例。シナリオ別の試算額と、追跡開始ボタンが表示されている"
+          width={712}
+          height={713}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>株価は毎日更新されます</H2>
       <P>
