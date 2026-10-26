@@ -1,17 +1,77 @@
 import type { Metadata } from "next";
-import { P } from "@/components/Prose";
+import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
+import { CtaButton, APP_URL } from "@/components/CtaButton";
 
 export const metadata: Metadata = {
   title: "IPO企業の儲けの仕組み・上場ストーリー・競合との違いを読み解く|大手町調査室九課",
 };
 
-export default function Page() {
+export default function DeepDive3PointsPage() {
   return (
     <article>
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPO企業の儲けの仕組み・上場ストーリー・競合との違いを読み解く
       </h1>
-      <P>【執筆前の下書きです。本文はこれから作成します】</P>
+
+      <P>
+        9軸のスコア分析に入る前に、その会社を知っておきたいと感じたことはありませんか。
+      </P>
+      <P>
+        「IPO企業情報AI分析レポート」の分析ページには、スコア分析より前に読める無料の「深掘り3要素」を用意しています。この記事では、その内容をご紹介します。
+      </P>
+      <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
+      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+
+      <H2>3つの要素</H2>
+      <P>
+        深掘り3要素は、儲けの仕組み・上場までのストーリー・競合との違いの3つです。いずれも目論見書(EDINET)をもとに、AIが文章にまとめています。
+      </P>
+      <UL>
+        <li>儲けの仕組み:どのような事業で、どのように利益を出しているか</li>
+        <li>上場までのストーリー:創業からIPOに至った経緯</li>
+        <li>競合との違い:同業他社と比べた位置づけ</li>
+      </UL>
+
+      <H2>有料分析より前に、無料で読めます</H2>
+      <P>
+        この3要素は、スコア分析のパートより上に配置しています。登録前の方でも、無料で読んでいただけます。
+      </P>
+      <P>
+        折りたたみ形式になっているため、気になった要素だけを開いてお読みいただけます。9軸の詳しいスコア分析は<InlineLink href="/9axis-method">IPOの9軸分析メソッドとは</InlineLink>でご紹介しています。
+      </P>
+
+      <H2>マーケットトレンドでも読めます</H2>
+      <P>
+        深掘り3要素は、マーケットトレンドのページでも独立した記事として取り上げています。分析ページより短くまとめているため、気になる銘柄をすばやく確認できます。
+      </P>
+
+      <H2>断定的な投資助言ではありません</H2>
+      <P>
+        3要素はいずれも、事実と見方を伝えることを目的にしています。「買うべき」といった断定的な表現は避けています。
+      </P>
+
+      <H2>まとめ</H2>
+      <UL>
+        <li>分析ページには、儲けの仕組み・上場ストーリー・競合との違いの3要素を無料で掲載しています。</li>
+        <li>有料のスコア分析より前に、登録前の方でもお読みいただけます。</li>
+        <li>マーケットトレンドのページでも、短くまとめた記事として読めます。</li>
+      </UL>
+
+      <H2>深掘り3要素を実際にご覧ください</H2>
+      <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
+      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+
+      <RelatedLinks
+        links={[
+          { href: "/9axis-method", label: "IPOの9軸分析メソッドとは" },
+          { href: "/edinet-ai-analysis", label: "目論見書(EDINET)をAIが自動解析" },
+          { href: "/for-beginners-and-advanced", label: "IPO分析は初心者から中上級者まで" },
+        ]}
+      />
+
+      <Small>
+        本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。
+      </Small>
     </article>
   );
 }
