@@ -1,17 +1,69 @@
 import type { Metadata } from "next";
-import { P } from "@/components/Prose";
+import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
+import { CtaButton, APP_URL } from "@/components/CtaButton";
 
 export const metadata: Metadata = {
   title: "AIのIPO事前分析は当たった?実際の値動きとの「答え合わせ」企画|大手町調査室九課",
 };
 
-export default function Page() {
+export default function AiAccuracyCheckPage() {
   return (
     <article>
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         AIのIPO事前分析は当たった?実際の値動きとの「答え合わせ」企画
       </h1>
-      <P>【執筆前の下書きです。本文はこれから作成します】</P>
+
+      <P>「AIが分析したと言っても、本当に当たっているのか」。そう感じる方も多いはずです。</P>
+      <P>
+        「IPO企業情報AI分析レポート」では、事前の分析と実際の値動きを突き合わせる「答え合わせ」に取り組んでいます。この記事では、その仕組みをご紹介します。
+      </P>
+      <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
+      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+
+      <H2>答え合わせの仕組み</H2>
+      <P>
+        上場後、決まったタイミングで事前のAI分析と実際の値動きを比べます。タイミングは4つあります。上場2営業日後・10営業日後・1か月後、そしてロックアップ解除の前です。
+      </P>
+      <P>
+        比べる内容は、AIが示した見立てと実際の株価の動きです。超短期・短期・長期の軸ごとに比べます。
+      </P>
+
+      <H2>結果はすべて公開します</H2>
+      <P>
+        結果は、良い場合もそうでない場合も公開しています。公開先はマーケットトレンドのページです。都合の良い結果だけを選ぶことはしません。
+      </P>
+      <P>継続して公開することで、分析の精度を確かめていただけます。</P>
+
+      <H2>断定はしません</H2>
+      <P>
+        この取り組みは、何%が正しかったという断定的な集計を目的にしていません。実際の値動きとあわせて確認できることを、大切にしています。
+      </P>
+      <P>
+        分析自体の設計思想は、<InlineLink href="/ai-reliability">AIのIPO分析は信用できる?</InlineLink>でご紹介しています。
+      </P>
+
+      <H2>まとめ</H2>
+      <UL>
+        <li>上場2営業日後・10営業日後・1か月後・ロックアップ解除前の4つのタイミングで、答え合わせを行います。</li>
+        <li>比べる内容は、AIの見立てと実際の株価の動きです。</li>
+        <li>結果は良い場合もそうでない場合も、マーケットトレンドのページで公開します。</li>
+      </UL>
+
+      <H2>答え合わせの実例を見てみてください</H2>
+      <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
+      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+
+      <RelatedLinks
+        links={[
+          { href: "/ai-reliability", label: "AIのIPO分析は信用できる?" },
+          { href: "/lockup-countdown", label: "IPOのロックアップ解除とは?" },
+          { href: "/investment-styles", label: "IPO投資はデイトレ・短期・長期でどう違う?" },
+        ]}
+      />
+
+      <Small>
+        本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。
+      </Small>
     </article>
   );
 }

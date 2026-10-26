@@ -19,14 +19,14 @@ const FOUR_THOUGHTS = [
   },
   {
     label: "長い目で応援する投資家を増やしたい",
-    desc: "上場直後の短期売買だけでなく、新規性のある事業や会社の将来性を長い目で見て応援する投資家の判断を手助けしたい",
+    desc: "上場直後の短期売買だけでなく、上場後も長く追い続けて会社の将来性を応援する投資家の判断を手助けしたい",
     href: "/investment-styles",
   },
 ];
 
 const ARTICLES: { href: string; label: string }[] = [
   { href: "/launch", label: "「IPO企業情報AI分析レポート」が本日ローンチ" },
-  { href: "/features", label: "既存のIPO情報サイトとどう違う?AI分析レポートの12の特徴" },
+  { href: "/features", label: "既存のIPO情報サイトとどう違う?AI分析レポートの16の特徴" },
   { href: "/9axis-method", label: "IPOの9軸分析メソッドとは?" },
   { href: "/edinet-ai-analysis", label: "目論見書(EDINET)をAIが自動解析" },
   { href: "/ai-reliability", label: "AIのIPO分析は信用できる?" },
