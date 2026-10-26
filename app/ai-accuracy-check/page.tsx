@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -33,6 +34,33 @@ export default function AiAccuracyCheckPage() {
         結果は、良い場合もそうでない場合も公開しています。公開先はマーケットトレンドのページです。都合の良い結果だけを選ぶことはしません。
       </P>
       <P>継続して公開することで、分析の精度を確かめていただけます。</P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/recent-ipo-results.png"
+          alt="最近上場した銘柄(直近60日)の一覧。上場日・銘柄・市場・公募価格・初値・公募価格比が、良い結果もそうでない結果もそのまま並んでいる"
+          width={859}
+          height={486}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
+      <P>
+        個別銘柄のページでも、公募価格・初値・上場日終値といった実績値を事前のシナリオと並べて確認できます。
+      </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/scenario-vs-actual.png"
+          alt="事前のAIシナリオと上場日終値実績を比べる答え合わせの例。公募価格・初値・上場日終値と公募価格比が並び、「まずここに注目」の見立てと実績が照らし合わされている"
+          width={763}
+          height={574}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>断定はしません</H2>
       <P>

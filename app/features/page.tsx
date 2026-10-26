@@ -43,6 +43,30 @@ export default function FeaturesPage() {
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
       <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/comparison-table.png"
+          alt="他のIPOサイトとの違いを示す比較表。上場日・公募価格・主幹事はどちらも対応している一方、AIスコア・A〜E評価、9軸詳細分析レポート、株価シナリオ(3パターン)、目論見書データ自動抽出、競合他社との財務比較、週次イベント通知メールは本サービスのみ対応と示されている"
+          width={755}
+          height={546}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/site-feature-cards.png"
+          alt="このサイトでできることを示す3つのカード。AIスコアリング(A〜E評価)・株価シナリオ(3パターン)・目論見書の要点を自動抽出、の3つが並んでいる"
+          width={743}
+          height={344}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>特徴の見方</H2>
       <P>16の特徴には、大手町調査室九課の4つの想いのどれに近いかを【 】で示しました。</P>
@@ -87,6 +111,20 @@ export default function FeaturesPage() {
       </P>
       <UL>
         <Item href={APP_URL} label="3分で分かる結論カード" tag="わかりやすさ" desc="分析ページの冒頭に、注目点と注意点とAIの見立てを1つのカードにまとめています。" />
+      </UL>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/three-minute-card.png"
+          alt="分析ページ冒頭の3分で分かる結論カード。銘柄名・AI総合評価(Cランクなど)に続き、注目点1・注目点2・AIの見立てが1つのカードにまとめて表示されている"
+          width={763}
+          height={502}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          2026年10月時点の表示(画面は一例です)
+        </p>
+      </div>
+      <UL>
         <Item href={`${APP_URL}/schedule`} label="IPO週報(週刊ブリーフ)" tag="わかりやすさ・長い目で応援" desc="毎週金曜日に、その週のIPO情報をメールでまとめてお届けします。" />
         <Item href={`${APP_URL}/tax-nisa`} label="税金・NISAガイド" tag="わかりやすさ" desc="IPO株の利益にかかる税金と、NISA枠の使い方を無料で解説しています。" />
         <Item href={`${APP_URL}/schedule`} label="予定のカレンダー自動登録" tag="長い目で応援" desc="申込み期限や上場日などの予定を、スマホのカレンダーに自動で取り込めます。" />
@@ -108,6 +146,19 @@ export default function FeaturesPage() {
       <UL>
         <Item href="/referral-program" label="友達紹介プログラム" tag="長い目で応援" desc="紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。" />
       </UL>
+      <P>効果的な使い方は、次の4ステップです。</P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/how-to-use-steps.png"
+          alt="効果的な使い方を示す4つのステップ。STEP1カレンダーで上場スケジュールを確認、STEP2 AI要約で気になる銘柄をスクリーニング、STEP3 9軸レポートで投資判断を深める、STEP4通知設定でBB開始を見逃さない"
+          width={751}
+          height={647}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>16の特徴に込めた想い</H2>
       <P>16の特徴はどれも、大手町調査室九課の次の想いから生まれています。</P>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -40,6 +41,18 @@ export default function EdinetAiAnalysisPage() {
         <li>代表者や主要株主の持株比率</li>
         <li>想定される市場規模</li>
       </UL>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/ipo-key-figures-table.png"
+          alt="目論見書から読み取った主要数値の表の例。上場日・市場・証券コード・業種・公募価格・初値・ロックアップ期間・主幹事がまとめて表示されている"
+          width={756}
+          height={432}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>数字は本文の引用と照合してから採用</H2>
       <P>
@@ -48,6 +61,18 @@ export default function EdinetAiAnalysisPage() {
       <P>
         AIには、本文からの引用を一緒に示すよう求めています。その引用が目論見書の本文に実在するかを確認します。さらに、引用の中に同じ数字があるかどうかも確認します。両方そろった場合だけ、採用する仕組みです。合わない数字は、採用せず捨てます。
       </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/ai-summary-citations.png"
+          alt="AI分析要約の例。本文からの引用データ根拠が一覧で示され、目論見書に記載がなかった項目はデータ不足として正直に示されている"
+          width={751}
+          height={612}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>要点をわかりやすい形に整理</H2>
       <P>

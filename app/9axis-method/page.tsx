@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -37,22 +38,34 @@ export default function NineAxisMethodPage() {
 
       <H2>超短期(初値・当日のトレード視点)</H2>
       <UL>
-        <Axis label="需給(流動性)" desc="上場時に市場に出回る株数の多さ・少なさを見ます。出回る株が少ないほど、値動きが大きくなりやすい傾向があります。" />
+        <Axis label="需給の軽さ" desc="上場時に市場に出回る株数の多さ・少なさを見ます。出回る株が少ないほど、値動きが大きくなりやすい傾向があります。" />
         <Axis label="ロックアップ" desc="大株主やVC・PEによる売却制限の内容を見ます。制限が緩い、または解除が近い場合は、需給への影響を確認しておく材料になります。" />
         <Axis label="上場タイミング" desc="上場時期の市場全体の地合いなど、タイミングに関わる要因を見ます。" />
       </UL>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/chapter1-ultra-short.png"
+          alt="流通比率と平均初値騰落率の関係を示すグラフ。流通比率が低いほど初値の上昇率が高い傾向をサンプルデータで例示している"
+          width={730}
+          height={414}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>短期(数週間〜数か月の視点)</H2>
       <UL>
         <Axis label="バリュエーション" desc="公開価格が、事業内容や業績に対して割安・割高のどちらに寄っているかを見ます。" />
-        <Axis label="VC・PEの売却懸念" desc="ロックアップ解除後、VC・PEなどの既存株主が売却してくる可能性の大きさを見ます。" />
+        <Axis label="VCや大株主の売り圧力" desc="ロックアップ解除後、VC・PEなどの既存株主が売却してくる可能性の大きさを見ます。" />
         <Axis label="成長性" desc="売上・利益などの推移から、事業がどう伸びてきたか、伸びしろがどこにあるかを見ます。" />
       </UL>
 
       <H2>長期(数年単位の視点)</H2>
       <UL>
         <Axis label="経営陣" desc="経営陣の経歴や、目論見書に示された経営方針を見ます。" />
-        <Axis label="収益性" desc="売上に対する利益の出方など、事業として利益を生み出す構造を見ます。" />
+        <Axis label="ユニットエコノミクス" desc="売上に対する利益の出方など、事業として利益を生み出す構造を見ます。" />
         <Axis label="競合環境" desc="同業他社と比べた立ち位置や、事業の強み・弱みを見ます。" />
       </UL>
 
@@ -75,6 +88,18 @@ export default function NineAxisMethodPage() {
       <P>
         「買うべき」「買わないほうがいい」といった断定はせず、判断のための材料をお届けすることを心がけています。分析の裏側にある設計の工夫は、<InlineLink href="/ai-reliability">AIが「嘘をつかない」ための設計思想</InlineLink>でご紹介しています。
       </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/business-risk-categories.png"
+          alt="目論見書の事業等のリスクを技術・セキュリティ、市場・人口動態、資金調達、法的規制、人材・組織のカテゴリ別に整理し、重要度(高・中)を示したカードの例"
+          width={626}
+          height={604}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
 
       <H2>9軸のもとになったデータは、無料で確認できます</H2>
       <P>

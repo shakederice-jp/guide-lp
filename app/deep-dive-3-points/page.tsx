@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -31,6 +32,18 @@ export default function DeepDive3PointsPage() {
         <li>上場までのストーリー:創業からIPOに至った経緯</li>
         <li>競合との違い:同業他社と比べた位置づけ</li>
       </UL>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/deep-dive-accordion.png"
+          alt="無料公開の深掘り3要素アコーディオン。ビジネスモデル(儲けの仕組み)・上場までのストーリー・競合企業との違いの3項目が、折りたたみ形式で並んでいる"
+          width={761}
+          height={289}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>有料分析より前に、無料で読めます</H2>
       <P>
