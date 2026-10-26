@@ -22,6 +22,18 @@ export default function LaunchPage() {
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
       <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/top-page-calendar.png"
+          alt="IPO企業情報AI分析レポートのトップページ。IPOスケジュールのカレンダーと、上場スケジュール一覧表・初値の結果一覧・ロックアップ解除予定などのメニュー、料金プランの案内が表示されている"
+          width={1077}
+          height={605}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          2026年10月時点の表示(画面は一例です)
+        </p>
+      </div>
 
       <H2>IPO企業情報AI分析レポートとは</H2>
       <P>

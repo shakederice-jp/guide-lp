@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -39,6 +40,22 @@ export default function InvestmentStylesPage() {
       <P>
         9軸の詳細分析が完了した銘柄では、超短期・短期・長期それぞれのグループ平均点を表示しています。自分の投資スタイルに近いグループの点数から、先に確認いただけます。
       </P>
+
+      <P>
+        この投資スタイル別の考え方は、どの有料プランでも共通してお読みいただけます。
+      </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/pricing-plans.png"
+          alt="IPO企業情報AI分析レポートの料金プラン画面。超短期・短期・長期といった投資スタイル別の分析がどのプランでも読めることを示す案内と、無料会員・A分析見放題プラン・B分析見放題+通知プラン・C フルパックプランの4つが並んでいる"
+          width={905}
+          height={760}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>どの投資スタイルでも判断材料になります</H2>
       <P>

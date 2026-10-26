@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -27,6 +28,18 @@ export default function OneMillionSimulationPage() {
         トップページの銘柄カードには「100万円投資なら現在、¥◯◯◯(+◯.◯%)」の表示が自動で出ます。対象は、上場済みで公募価格が確定している銘柄です。
       </P>
       <P>ログインや、追跡の手続きは必要ありません。</P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/simulation-cards.png"
+          alt="IPO企業情報AI分析レポートの銘柄カード。各銘柄について、公募価格で100万円買っていたら現在いくらかの金額と騰落率が表示され、初心者向け分析・中・上級者向け分析のボタンが並んでいる"
+          width={755}
+          height={818}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          2026年9月時点の表示(画面は一例です)
+        </p>
+      </div>
 
       <H2>マイページでは、保有銘柄をまとめて確認</H2>
       <P>

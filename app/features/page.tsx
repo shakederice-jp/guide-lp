@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 
@@ -90,6 +91,18 @@ export default function FeaturesPage() {
         <Item href={`${APP_URL}/tax-nisa`} label="税金・NISAガイド" tag="わかりやすさ" desc="IPO株の利益にかかる税金と、NISA枠の使い方を無料で解説しています。" />
         <Item href={`${APP_URL}/schedule`} label="予定のカレンダー自動登録" tag="長い目で応援" desc="申込み期限や上場日などの予定を、スマホのカレンダーに自動で取り込めます。" />
       </UL>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/weekly-calendar-view.png"
+          alt="IPO企業情報AI分析レポートのスケジュール画面。月間・週間を切り替えて見られるカレンダーに、経済指標や日銀の予定、IPO銘柄の番号が表示されている"
+          width={785}
+          height={520}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>はじめやすさ</H2>
       <UL>
