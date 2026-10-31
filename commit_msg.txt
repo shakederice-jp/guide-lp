@@ -1,8 +1,6 @@
-SEO/GEO対策一式、前後記事ナビ、CTA文言変更、画像の高解像度化
+トップページに画像を3枚追加
 
-- ページ別メタデータ、構造化データ(Organization/WebSite/Article/Breadcrumb/FAQ/ItemList)、sitemap.xml、robots.txt、llms.txt、favicon/OGP画像を追加
-- 記事下部に前後ナビを追加、CTAボタン文言を「分析ページへ」に統一
-- 低解像度だったスクリーンショットを高解像度版に差し替え
+- 投資シミュレーション実績、IPOカレンダー、IPO予定企業一覧のスクリーンショットをトップページに追加
 
 Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01CjJcx8exm9jbFcji6MHeMQ

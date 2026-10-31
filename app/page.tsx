@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { H2, P, UL, InlineLink } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
 import { ARTICLES } from "@/lib/articles";
@@ -74,6 +75,19 @@ export default function TopPage() {
         <CtaButton href={APP_URL}>分析ページへ</CtaButton>
       </section>
 
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/top-simulation-results.png"
+          alt="投資シミュレーション実績の例。公募価格で100万円買っていたら現在いくらかを、銘柄ごとに損益つきで示している"
+          width={1015}
+          height={765}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
+
       <H2>大手町調査室九課の4つの想い</H2>
       <div className="mb-4 grid gap-4 sm:grid-cols-2">
         {FOUR_THOUGHTS.map((t) => (
@@ -99,6 +113,19 @@ export default function TopPage() {
         ))}
       </UL>
 
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/top-calendar-wide.png"
+          alt="IPOカレンダーの例。月間表示のスケジュールと、料金プラン・マーケットトレンドへのリンクが並んで表示されている"
+          width={1432}
+          height={715}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
+
       <H2>無料会員でできること</H2>
       <UL>
         <li>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</li>
@@ -106,6 +133,19 @@ export default function TopPage() {
           友達紹介では紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。
         </li>
       </UL>
+
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/top-schedule-list.png"
+          alt="IPO予定企業一覧の例。無料体験の案内と、各銘柄のAI分析要約が表示されている"
+          width={1025}
+          height={603}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>よくある質問</H2>
       <FaqJsonLd items={FAQ_ITEMS.map((f) => ({ q: f.q, a: f.a }))} />
