@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "IPOの公募割れリスクとは?兆候と向き合い方を隠さず解説|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPOの公募割れリスクとは?兆候と向き合い方を隠さず解説",
+  description:
+    "IPOの公募割れとは何が起きている状態か。兆候とリスクへの向き合い方を、煽らず断定せずに解説します。",
+  path: "/below-offering-price-risk",
+});
 
 export default function BelowOfferingPriceRiskPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPOの公募割れリスクとは?兆候と向き合い方を隠さず解説"
+        description="IPOの公募割れとは何が起きている状態か。兆候とリスクへの向き合い方を、煽らず断定せずに解説します。"
+        path="/below-offering-price-risk"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPOの公募割れリスクとは?兆候と向き合い方を隠さず解説
       </h1>
@@ -20,7 +31,7 @@ export default function BelowOfferingPriceRiskPage() {
         「IPO企業情報AI分析レポート」では、こうした公募割れのリスクも隠さずお伝えする方針で分析しています。この記事では、その考え方をご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>公募割れとは</H2>
       <P>
@@ -62,7 +73,7 @@ export default function BelowOfferingPriceRiskPage() {
 
       <H2>リスクも含めた分析を見てみてください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -71,6 +82,8 @@ export default function BelowOfferingPriceRiskPage() {
           { href: "/ai-accuracy-check", label: "AIのIPO事前分析は当たった?" },
         ]}
       />
+
+      <PrevNextNav current="/below-offering-price-risk" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "IPOのロックアップ解除とは?日程と株価への影響、カウントダウン機能|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPOのロックアップ解除とは?日程と株価への影響、カウントダウン機能",
+  description:
+    "IPOのロックアップ解除とは何か。株価への影響と、解除日までの残り日数を確認できるカウントダウン機能をご紹介します。",
+  path: "/lockup-countdown",
+});
 
 export default function LockupCountdownPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPOのロックアップ解除とは?日程と株価への影響、カウントダウン機能"
+        description="IPOのロックアップ解除とは何か。株価への影響と、解除日までの残り日数を確認できるカウントダウン機能をご紹介します。"
+        path="/lockup-countdown"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPOのロックアップ解除とは?日程と株価への影響、カウントダウン機能
       </h1>
@@ -21,7 +32,7 @@ export default function LockupCountdownPage() {
         ロックアップが解除されると、市場に出回る株数が急に増えることがあります。「IPO企業情報AI分析レポート」では、解除日までの日数をカウントダウン表示しています。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>ロックアップ解除で何が起きるか</H2>
       <P>
@@ -68,7 +79,7 @@ export default function LockupCountdownPage() {
 
       <H2>ロックアップ解除のカウントダウンを見てみてください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -77,6 +88,8 @@ export default function LockupCountdownPage() {
           { href: "/below-offering-price-risk", label: "IPOの公募割れリスクとは?" },
         ]}
       />
+
+      <PrevNextNav current="/lockup-countdown" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

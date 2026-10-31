@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "「IPO企業情報AI分析レポート」が本日ローンチ ― 大手町調査室九課が運営|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "「IPO企業情報AI分析レポート」が本日ローンチ ― 大手町調査室九課が運営",
+  description:
+    "「IPO企業情報AI分析レポート」がローンチ。目論見書をAIが9つの軸で分析し、投資判断に役立つ情報を届けるサービスの全体像をご紹介します。",
+  path: "/launch",
+});
 
 export default function LaunchPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="「IPO企業情報AI分析レポート」が本日ローンチ ― 大手町調査室九課が運営"
+        description="「IPO企業情報AI分析レポート」がローンチ。目論見書をAIが9つの軸で分析し、投資判断に役立つ情報を届けるサービスの全体像をご紹介します。"
+        path="/launch"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         「IPO企業情報AI分析レポート」が本日ローンチ ― 大手町調査室九課が運営
       </h1>
@@ -21,7 +32,7 @@ export default function LaunchPage() {
         大手町調査室九課は本日、IPO(新規上場)銘柄をAIが分析するWebサービス「IPO企業情報AI分析レポート」をローンチしました。この記事では、サービスの全体像をご紹介します。あわせて、当調査室九課がこのサービスに込めた4つの想いもご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
           src="/top-page-calendar.png"
@@ -65,7 +76,7 @@ export default function LaunchPage() {
         </p>
       </div>
       <P>
-        特徴の全体像は、<InlineLink href="/features">12の特徴のまとめ</InlineLink>でご覧いただけます。
+        特徴の全体像は、<InlineLink href="/features">16の特徴のまとめ</InlineLink>でご覧いただけます。
       </P>
 
       <H2>上場直後の短期売買だけではないIPOの見方</H2>
@@ -78,6 +89,18 @@ export default function LaunchPage() {
       <P>
         詳しくは、<InlineLink href="/investment-styles">IPO投資はデイトレ・短期・長期でどう違う?</InlineLink>をご覧ください。
       </P>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/ipo-guide-hero.png"
+          alt="大手町調査室九課特別レポート「お宝銘柄を探せ。IPO投資で資産を増やす実践的法則」のバナー。超短期(初値狙い)・短期(1〜3ヶ月)・長期(数年〜)の3つのボタンが並んでいる"
+          width={777}
+          height={345}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          画面は一例です
+        </p>
+      </div>
 
       <H2>無料会員でできること</H2>
       <UL>
@@ -96,7 +119,7 @@ export default function LaunchPage() {
         <li><strong>多角的に深掘りする</strong> ― プロが見ているような視点で、IPO情報をAIが多角的に深掘りして個人投資家に届けたい</li>
         <li><strong>難しい情報をわかりやすく</strong> ― 専門知識がないと読み解きにくい財務諸表や経営データを、わかりやすく届けたい</li>
         <li><strong>目論見書を要点だけに</strong> ― 100ページ以上ある目論見書の要点だけを、時間がない個人投資家に届けたい</li>
-        <li><strong>長い目で応援する投資家を増やしたい</strong> ― 上場直後の短期売買だけでなく、新規性のある事業や会社の将来性を長い目で見て応援する投資家の判断を手助けしたい</li>
+        <li><strong>長い目で応援する投資家を増やしたい</strong> ― 上場直後の短期売買だけでなく、上場後も長く追い続けて会社の将来性を応援する投資家の判断を手助けしたい</li>
       </UL>
       <P>
         この想いの背景は、<InlineLink href="/our-story">時代の変化を、チャンスに変える会社を応援したい</InlineLink>でお伝えしています。
@@ -114,15 +137,17 @@ export default function LaunchPage() {
       <P>
         無料会員でも、毎月2銘柄は無料でご覧いただけます。友達紹介では紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。
       </P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
-          { href: "/features", label: "IPOの12の特徴まとめ" },
+          { href: "/features", label: "IPOの16の特徴まとめ" },
           { href: "/9axis-method", label: "IPOの9軸分析メソッドとは" },
           { href: "/our-story", label: "時代の変化を、チャンスに変える会社を応援したい" },
         ]}
       />
+
+      <PrevNextNav current="/launch" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

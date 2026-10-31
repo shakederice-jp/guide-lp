@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "AIのIPO事前分析は当たった?実際の値動きとの「答え合わせ」企画|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "AIのIPO事前分析は当たった?実際の値動きとの「答え合わせ」企画",
+  description:
+    "AIの事前分析は実際の値動きと一致したのか。結果をすべて公開する「答え合わせ」企画の仕組みをご紹介します。",
+  path: "/ai-accuracy-check",
+});
 
 export default function AiAccuracyCheckPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="AIのIPO事前分析は当たった?実際の値動きとの「答え合わせ」企画"
+        description="AIの事前分析は実際の値動きと一致したのか。結果をすべて公開する「答え合わせ」企画の仕組みをご紹介します。"
+        path="/ai-accuracy-check"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         AIのIPO事前分析は当たった?実際の値動きとの「答え合わせ」企画
       </h1>
@@ -19,7 +30,7 @@ export default function AiAccuracyCheckPage() {
         「IPO企業情報AI分析レポート」では、事前の分析と実際の値動きを突き合わせる「答え合わせ」に取り組んでいます。この記事では、その仕組みをご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>答え合わせの仕組み</H2>
       <P>
@@ -53,8 +64,8 @@ export default function AiAccuracyCheckPage() {
         <Image
           src="/price-scenario-short.png"
           alt="分析ページの株価シナリオ分析(短期)の例。強気・中立・弱気の3パターンを、それぞれの確率とあわせて示している"
-          width={742}
-          height={676}
+          width={921}
+          height={733}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -65,8 +76,8 @@ export default function AiAccuracyCheckPage() {
         <Image
           src="/price-scenario-long.png"
           alt="分析ページの株価シナリオ分析(長期)の例。数年先までの強気・中立・弱気の3パターンを、それぞれの確率とあわせて示している"
-          width={754}
-          height={676}
+          width={1031}
+          height={734}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -103,7 +114,7 @@ export default function AiAccuracyCheckPage() {
 
       <H2>答え合わせの実例を見てみてください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -112,6 +123,8 @@ export default function AiAccuracyCheckPage() {
           { href: "/investment-styles", label: "IPO投資はデイトレ・短期・長期でどう違う?" },
         ]}
       />
+
+      <PrevNextNav current="/ai-accuracy-check" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

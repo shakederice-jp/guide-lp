@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "既存のIPO情報サイトとどう違う?AI分析レポートの16の特徴|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "既存のIPO情報サイトとどう違う?AI分析レポートの16の特徴",
+  description:
+    "既存のIPO情報サイトと何が違うのか。AI分析レポートが持つ16の特徴を、分析の仕組みから時短機能まで一覧でご紹介します。",
+  path: "/features",
+});
 
 function Item({
   href,
@@ -31,6 +37,11 @@ function Item({
 export default function FeaturesPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="既存のIPO情報サイトとどう違う?AI分析レポートの16の特徴"
+        description="既存のIPO情報サイトと何が違うのか。AI分析レポートが持つ16の特徴を、分析の仕組みから時短機能まで一覧でご紹介します。"
+        path="/features"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         既存のIPO情報サイトとどう違う?AI分析レポートの16の特徴
       </h1>
@@ -42,7 +53,7 @@ export default function FeaturesPage() {
         「IPO企業情報AI分析レポート」には、そうした迷いに向き合うための16の特徴があります。この記事では、その全体像を一覧でご紹介します。気になる項目は、リンク先のページで詳しく説明しています。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
           src="/comparison-table.png"
@@ -116,8 +127,8 @@ export default function FeaturesPage() {
         <Image
           src="/three-minute-card.png"
           alt="分析ページ冒頭の3分で分かる結論カード。銘柄名・AI総合評価(Cランクなど)に続き、注目点1・注目点2・AIの見立てが1つのカードにまとめて表示されている"
-          width={763}
-          height={502}
+          width={1027}
+          height={678}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -183,7 +194,7 @@ export default function FeaturesPage() {
       <P>
         無料会員登録は課金不要です。友達紹介では紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。
       </P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -192,6 +203,8 @@ export default function FeaturesPage() {
           { href: "/investment-styles", label: "IPO投資はデイトレ・短期・長期でどう違う?" },
         ]}
       />
+
+      <PrevNextNav current="/features" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

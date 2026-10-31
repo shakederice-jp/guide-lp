@@ -2,11 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 import { RiskCategoryCard } from "@/components/RiskCard";
 
-export const metadata: Metadata = {
-  title: "IPOの9軸分析メソッドとは?AIが多角的に評価する9つの視点|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPOの9軸分析メソッドとは?AIが多角的に評価する9つの視点",
+  description:
+    "IPO銘柄を超短期・短期・長期の9つの軸で評価する「9軸分析メソッド」。そう設計した理由と全体像をご紹介します。",
+  path: "/9axis-method",
+});
 
 function Axis({ label, desc }: { label: string; desc: string }) {
   return (
@@ -19,6 +25,11 @@ function Axis({ label, desc }: { label: string; desc: string }) {
 export default function NineAxisMethodPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPOの9軸分析メソッドとは?AIが多角的に評価する9つの視点"
+        description="IPO銘柄を超短期・短期・長期の9つの軸で評価する「9軸分析メソッド」。そう設計した理由と全体像をご紹介します。"
+        path="/9axis-method"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPOの9軸分析メソッドとは?AIが多角的に評価する9つの視点
       </h1>
@@ -30,7 +41,7 @@ export default function NineAxisMethodPage() {
         「IPO企業情報AI分析レポート」では、1つの銘柄を9つの軸に分けて評価する「9軸分析メソッド」を採用しています。この記事では、9軸の全体像と、そう設計した理由をご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>9軸の全体像 ― 3つの時間軸 × 3つの視点</H2>
       <P>
@@ -62,12 +73,12 @@ export default function NineAxisMethodPage() {
         <Axis label="VCや大株主の売り圧力" desc="ロックアップ解除後、VC・PEなどの既存株主が売却してくる可能性の大きさを見ます。" />
         <Axis label="成長性" desc="売上・利益などの推移から、事業がどう伸びてきたか、伸びしろがどこにあるかを見ます。" />
       </UL>
-      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 697 }}>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
           src="/axis-detail-short.png"
           alt="超短期・短期の軸別スコアカードの例。需給の軽さ・ロックアップ・上場タイミングと、バリュエーション・VCや大株主の売り圧力・成長性の評価が表示されている"
-          width={697}
-          height={694}
+          width={1023}
+          height={727}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -81,12 +92,24 @@ export default function NineAxisMethodPage() {
         <Axis label="ユニットエコノミクス" desc="売上に対する利益の出方など、事業として利益を生み出す構造を見ます。" />
         <Axis label="競合環境" desc="同業他社と比べた立ち位置や、事業の強み・弱みを見ます。" />
       </UL>
-      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 616 }}>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/axis-detail-long.png"
-          alt="長期の軸別スコアカードの例。経営陣・ユニットエコノミクス・競合環境の評価と、有料プラン限定のバリュー・グロースマップが表示されている"
-          width={616}
-          height={711}
+          src="/axis-detail-long-quadrant.png"
+          alt="長期の独自AIナインクロス試算マップの例。期待先行型・掘り出し物候補・慎重に見極めたい・堅実バリュー型の4象限でバリュー度とグロース度を示している"
+          width={925}
+          height={664}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/axis-detail-long-grades.png"
+          alt="長期の軸別スコアカードの例。ユニットエコノミクス・競合環境・経営陣の評価がA〜Eのランクで表示されている"
+          width={932}
+          height={404}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -162,7 +185,7 @@ export default function NineAxisMethodPage() {
 
       <H2>9軸の分析を、実際の銘柄で見てみてください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -171,6 +194,8 @@ export default function NineAxisMethodPage() {
           { href: "/investment-styles", label: "IPO投資はデイトレ・短期・長期でどう違う?" },
         ]}
       />
+
+      <PrevNextNav current="/9axis-method" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではなく、判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

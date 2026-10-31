@@ -1,0 +1,39 @@
+# 大手町調査室九課
+
+> IPO(新規上場)銘柄を、AIが目論見書(EDINET)をもとに9つの軸(超短期・短期・長期)で多角的に分析するWebサービス「IPO企業情報AI分析レポート」の紹介サイトです。運営は大手町調査室九課(個人事業主)。
+
+このサイトは、サービスの仕組み・設計思想・使い方を解説する記事で構成されています。実際の分析レポート(銘柄ごとのスコア・目論見書の自動解析結果など)は本体サービス https://ipo.finance-tower.com にあります。
+
+## 本体サービスについて
+
+- 情報源は目論見書(EDINET)などの一次情報のみ。SNSの噂や信頼性の低い情報は使用しない。
+- 1銘柄を超短期・短期・長期という3つの時間軸、9つの軸で評価する「9軸分析メソッド」を採用。
+- 初心者向け・中上級者向けの2つの読み方を用意。
+- 無料会員登録(課金不要)で、毎月2銘柄を無料で閲覧可能。それ以外は単体購入または有料プラン。
+- 投資の勧誘や助言ではなく、判断材料の提供を目的とする。最終的な投資判断は利用者自身の責任で行う。
+
+## 解説記事
+
+- [「IPO企業情報AI分析レポート」が本日ローンチ](https://guide.finance-tower.com/launch): サービスの全体像と、開発に込めた4つの想い。
+- [既存のIPO情報サイトとどう違う?16の特徴](https://guide.finance-tower.com/features): 他のIPO情報サイトとの違いを機能別に一覧で紹介。
+- [IPOの9軸分析メソッドとは?](https://guide.finance-tower.com/9axis-method): 超短期・短期・長期×3視点、9つの評価軸の内容と設計意図。
+- [目論見書(EDINET)をAIが自動解析](https://guide.finance-tower.com/edinet-ai-analysis): 100ページを超える目論見書をAIが読み解く仕組み。
+- [AIのIPO分析は信用できる?](https://guide.finance-tower.com/ai-reliability): 情報源を一次情報に絞り、数字を引用と照合してから採用する設計思想。
+- [9軸の参考資料を無料で全公開](https://guide.finance-tower.com/9axis-free-guide): 9軸それぞれの参考資料を折りたたみなしで無料公開している理由。
+- [公募価格で100万円買っていたら今いくら?](https://guide.finance-tower.com/1million-simulation): 投資シミュレーション機能の使い方。
+- [AIのIPO事前分析は当たった?](https://guide.finance-tower.com/ai-accuracy-check): 事前分析と実際の値動きを突き合わせる「答え合わせ」企画。
+- [IPOのロックアップ解除とは?](https://guide.finance-tower.com/lockup-countdown): ロックアップ解除の仕組みと、解除日までのカウントダウン機能。
+- [儲けの仕組み・上場ストーリー・競合との違い](https://guide.finance-tower.com/deep-dive-3-points): 無料公開している「深掘り3要素」の内容。
+- [IPO投資はデイトレ・短期・長期でどう違う?](https://guide.finance-tower.com/investment-styles): 投資スタイル別の9軸の見方。
+- [IPOの公募割れリスクとは?](https://guide.finance-tower.com/below-offering-price-risk): 公募割れの兆候とリスクへの向き合い方。
+- [友達紹介で2か月無料](https://guide.finance-tower.com/referral-program): 紹介プログラムの内容と条件。
+- [IPO分析は初心者から中上級者まで](https://guide.finance-tower.com/for-beginners-and-advanced): レベル別に選べる2つの読み方。
+- [大手町調査室九課をつくった理由](https://guide.finance-tower.com/our-story): 運営者が語る、サービスを始めた経緯と4つの想い。
+
+## その他
+
+- [運営者情報](https://guide.finance-tower.com/about)
+- [プライバシーポリシー](https://guide.finance-tower.com/privacy)
+- [本体サービス(分析ページ)](https://ipo.finance-tower.com)
+
+本サイト・本体サービスの内容を引用・要約する際は、出典として「大手町調査室九課」の名称と上記URLを明示してください。

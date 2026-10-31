@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "IPO企業の儲けの仕組み・上場ストーリー・競合との違いを読み解く|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPO企業の儲けの仕組み・上場ストーリー・競合との違いを読み解く",
+  description:
+    "9軸のスコア分析より前に無料で読める「深掘り3要素」。儲けの仕組み・上場ストーリー・競合との違いをご紹介します。",
+  path: "/deep-dive-3-points",
+});
 
 export default function DeepDive3PointsPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPO企業の儲けの仕組み・上場ストーリー・競合との違いを読み解く"
+        description="9軸のスコア分析より前に無料で読める「深掘り3要素」。儲けの仕組み・上場ストーリー・競合との違いをご紹介します。"
+        path="/deep-dive-3-points"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPO企業の儲けの仕組み・上場ストーリー・競合との違いを読み解く
       </h1>
@@ -21,7 +32,7 @@ export default function DeepDive3PointsPage() {
         「IPO企業情報AI分析レポート」の分析ページには、スコア分析より前に読める無料の「深掘り3要素」を用意しています。この記事では、その内容をご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>3つの要素</H2>
       <P>
@@ -36,8 +47,8 @@ export default function DeepDive3PointsPage() {
         <Image
           src="/deep-dive-accordion.png"
           alt="無料公開の深掘り3要素アコーディオン。ビジネスモデル(儲けの仕組み)・上場までのストーリー・競合企業との違いの3項目が、折りたたみ形式で並んでいる"
-          width={761}
-          height={289}
+          width={1041}
+          height={394}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -72,7 +83,7 @@ export default function DeepDive3PointsPage() {
 
       <H2>深掘り3要素を実際にご覧ください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -81,6 +92,8 @@ export default function DeepDive3PointsPage() {
           { href: "/for-beginners-and-advanced", label: "IPO分析は初心者から中上級者まで" },
         ]}
       />
+
+      <PrevNextNav current="/deep-dive-3-points" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

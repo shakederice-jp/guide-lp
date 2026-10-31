@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "IPO投資はデイトレ・短期・長期でどう違う?投資スタイル別の見方|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPO投資はデイトレ・短期・長期でどう違う?投資スタイル別の見方",
+  description:
+    "IPO投資はデイトレ・短期・長期で見るべきポイントが違います。投資スタイル別の9軸の見方をご紹介します。",
+  path: "/investment-styles",
+});
 
 export default function InvestmentStylesPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPO投資はデイトレ・短期・長期でどう違う?投資スタイル別の見方"
+        description="IPO投資はデイトレ・短期・長期で見るべきポイントが違います。投資スタイル別の9軸の見方をご紹介します。"
+        path="/investment-styles"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPO投資はデイトレ・短期・長期でどう違う?投資スタイル別の見方
       </h1>
@@ -21,7 +32,7 @@ export default function InvestmentStylesPage() {
         「IPO企業情報AI分析レポート」は、超短期・短期・長期という3つの投資スタイルに分けて分析しています。この記事では、その考え方をご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>9軸を3つの時間軸に分けています</H2>
       <P>
@@ -65,8 +76,8 @@ export default function InvestmentStylesPage() {
         <Image
           src="/deep-analysis-header.png"
           alt="分析ページのDEEP ANALYSIS見出し。初心者向け・中上級者向けの切り替えと超短期・短期・長期のグループ別スコアに続き、初値で売り抜けたい方・数週間から数ヶ月で利益を取りたい方・数年単位でじっくり育てたい方という投資スタイル診断の案内が表示されている"
-          width={756}
-          height={573}
+          width={1008}
+          height={748}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -103,7 +114,7 @@ export default function InvestmentStylesPage() {
 
       <H2>投資スタイル別の分析を見てみてください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -112,6 +123,8 @@ export default function InvestmentStylesPage() {
           { href: "/below-offering-price-risk", label: "IPOの公募割れリスクとは?" },
         ]}
       />
+
+      <PrevNextNav current="/investment-styles" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

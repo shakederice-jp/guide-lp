@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, InlineLink, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "IPO分析の9軸参考資料を無料で全公開|折りたたみなしで読める|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPO分析の9軸参考資料を無料で全公開|折りたたみなしで読める",
+  description:
+    "IPO分析の9軸それぞれの参考資料を、折りたたみなしで全文無料公開。登録前でも中身を確かめてから判断できます。",
+  path: "/9axis-free-guide",
+});
 
 export default function NineAxisFreeGuidePage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPO分析の9軸参考資料を無料で全公開|折りたたみなしで読める"
+        description="IPO分析の9軸それぞれの参考資料を、折りたたみなしで全文無料公開。登録前でも中身を確かめてから判断できます。"
+        path="/9axis-free-guide"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPO分析の9軸参考資料を無料で全公開|折りたたみなしで読める
       </h1>
@@ -19,7 +30,7 @@ export default function NineAxisFreeGuidePage() {
         「IPO企業情報AI分析レポート」では、9軸それぞれの参考資料を折りたたまずに全文公開しています。登録前の方でも、無料会員の方と同じ内容をお読みいただけます。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>折りたたまない理由</H2>
       <P>
@@ -36,36 +47,60 @@ export default function NineAxisFreeGuidePage() {
       <P>
         9つの軸の詳しい内容は、<InlineLink href="/9axis-method">IPOの9軸分析メソッドとは?</InlineLink>でご紹介しています。
       </P>
-      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 635 }}>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-ultra-short.png"
-          alt="超短期投資家向け参考資料1の例。IPO条件・資金調達サマリーの表と、需給・VC分析(流動性・ロックアップ・VC売却懸念)のドーナツグラフが、折りたたみなしで表示されている"
-          width={635}
-          height={770}
+          src="/reference-ultra-short-summary.png"
+          alt="超短期投資家向け参考資料1の例。IPO条件・資金調達サマリーの表が、折りたたみなしで表示されている"
+          width={933}
+          height={750}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
           サンプルデータによる例示です
         </p>
       </div>
-      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 630 }}>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/reference-ultra-short-vc.png"
+          alt="需給・VC分析(流動性・ロックアップ・VC売却懸念)のドーナツグラフの例。株主構成と流通比率・ロックアップ・売り圧力がまとめて表示されている"
+          width={1165}
+          height={609}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
           src="/reference-nine-axis-radar.png"
           alt="短期投資家向け参考資料2の例。9軸それぞれのスコアをレーダーチャートと一覧バーで示したパフォーマンス・レーダーが、折りたたみなしで表示されている"
-          width={630}
-          height={547}
+          width={1032}
+          height={736}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
           サンプルデータによる例示です
         </p>
       </div>
-      <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 627 }}>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-long-term-financials.png"
-          alt="長期投資家向け参考資料3の例。売上高・経常利益の推移グラフと、自己資本比率・ROE・PER・PBRなど主要経営指標の推移表が、折りたたみなしで表示されている"
-          width={627}
-          height={720}
+          src="/reference-long-term-financials-revenue.png"
+          alt="長期投資家向け参考資料3の例。売上高・経常利益の推移グラフが、折りたたみなしで表示されている"
+          width={948}
+          height={587}
+          className="h-auto w-full"
+        />
+        <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
+          サンプルデータによる例示です
+        </p>
+      </div>
+      <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
+        <Image
+          src="/reference-long-term-financials-metrics.png"
+          alt="自己資本比率・ROE・PER・PBRなど主要経営指標の推移表と、株主構成の例。折りたたみなしで表示されている"
+          width={940}
+          height={757}
           className="h-auto w-full"
         />
         <p className="bg-white px-4 py-2 text-center text-xs text-brand-subtle">
@@ -90,7 +125,7 @@ export default function NineAxisFreeGuidePage() {
 
       <H2>9軸の参考資料を実際にご覧ください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -99,6 +134,8 @@ export default function NineAxisFreeGuidePage() {
           { href: "/for-beginners-and-advanced", label: "IPO分析は初心者から中上級者まで" },
         ]}
       />
+
+      <PrevNextNav current="/9axis-free-guide" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。

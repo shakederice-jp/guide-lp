@@ -1,5 +1,39 @@
+import type { Metadata } from "next";
 import { H2, P, UL, InlineLink } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { ARTICLES } from "@/lib/articles";
+import { pageMetadata } from "@/lib/seo";
+import { ItemListJsonLd, FaqJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = pageMetadata({
+  title: "IPOをAIが徹底分析|デイトレ~長期投資家別",
+  description:
+    "IPO銘柄をAIが目論見書から詳細に分析。デイトレ・短期・長期の投資スタイル別に、9つの軸で多角的に解説します。無料会員は毎月2銘柄を無料でご覧いただけます。",
+  path: "/",
+});
+
+const FAQ_ITEMS = [
+  {
+    q: "IPO企業情報AI分析レポートとは何ですか?",
+    a: "目論見書(EDINET)をAIが解析し、超短期・短期・長期の9つの軸で多角的に評価するサービスです。無料会員登録で、毎月2銘柄を無料でご覧いただけます。",
+  },
+  {
+    q: "初心者でも使えますか?",
+    a: "財務諸表が読めなくても理解できる初心者向けの分析と、9軸の詳しいデータをそのまま読める中上級者向けの分析があります。いつでも切り替えてお読みいただけます。",
+  },
+  {
+    q: "すべての銘柄を無料で見られますか?",
+    a: "毎月、日付順で最初の2銘柄は無料でご覧いただけます。それ以外の銘柄は、単体購入または有料プランでのご利用になります。",
+  },
+  {
+    q: "AIの分析はどこまで信用できますか?",
+    a: "情報源は目論見書などの一次情報に絞り、AIが示した数字は本文の引用と照合してから採用しています。",
+  },
+  {
+    q: "友達紹介はありますか?",
+    a: "友達紹介プログラムでは、紹介した方・された方の両方が2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。",
+  },
+];
 
 const FOUR_THOUGHTS = [
   {
@@ -24,23 +58,6 @@ const FOUR_THOUGHTS = [
   },
 ];
 
-const ARTICLES: { href: string; label: string }[] = [
-  { href: "/launch", label: "「IPO企業情報AI分析レポート」が本日ローンチ" },
-  { href: "/features", label: "既存のIPO情報サイトとどう違う?AI分析レポートの16の特徴" },
-  { href: "/9axis-method", label: "IPOの9軸分析メソッドとは?" },
-  { href: "/edinet-ai-analysis", label: "目論見書(EDINET)をAIが自動解析" },
-  { href: "/ai-reliability", label: "AIのIPO分析は信用できる?" },
-  { href: "/9axis-free-guide", label: "IPO分析の9軸参考資料を無料で全公開" },
-  { href: "/1million-simulation", label: "公募価格で100万円買っていたら今いくら?" },
-  { href: "/ai-accuracy-check", label: "AIのIPO事前分析は当たった?" },
-  { href: "/lockup-countdown", label: "IPOのロックアップ解除とは?" },
-  { href: "/deep-dive-3-points", label: "儲けの仕組み・上場ストーリー・競合との違い" },
-  { href: "/investment-styles", label: "IPO投資はデイトレ・短期・長期でどう違う?" },
-  { href: "/below-offering-price-risk", label: "IPOの公募割れリスクとは?" },
-  { href: "/referral-program", label: "友達紹介で2か月無料" },
-  { href: "/for-beginners-and-advanced", label: "IPO分析は初心者から中上級者まで" },
-  { href: "/our-story", label: "大手町調査室九課をつくった理由" },
-];
 
 export default function TopPage() {
   return (
@@ -54,7 +71,7 @@ export default function TopPage() {
         <P>
           IPO銘柄をAIが目論見書から詳細に分析。デイトレ・短期・長期の投資スタイル別に、9つの軸で多角的に解説します。無料会員は毎月2銘柄を無料でご覧いただけます。
         </P>
-        <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+        <CtaButton href={APP_URL}>分析ページへ</CtaButton>
       </section>
 
       <H2>大手町調査室九課の4つの想い</H2>
@@ -73,6 +90,7 @@ export default function TopPage() {
       </P>
 
       <H2>記事一覧</H2>
+      <ItemListJsonLd items={ARTICLES} />
       <UL>
         {ARTICLES.map((a) => (
           <li key={a.href}>
@@ -88,7 +106,19 @@ export default function TopPage() {
           友達紹介では紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。
         </li>
       </UL>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+
+      <H2>よくある質問</H2>
+      <FaqJsonLd items={FAQ_ITEMS.map((f) => ({ q: f.q, a: f.a }))} />
+      <div className="space-y-4">
+        {FAQ_ITEMS.map((f) => (
+          <div key={f.q} className="rounded-xl border border-brand-pale bg-white p-4">
+            <p className="mb-1 font-bold text-brand-tealDark">Q. {f.q}</p>
+            <p className="text-sm text-brand-ink">A. {f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
     </div>
   );
 }

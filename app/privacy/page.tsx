@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import { H2, P, InlineLink } from "@/components/Prose";
+import { pageMetadata } from "@/lib/seo";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "プライバシーポリシー|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "プライバシーポリシー",
+  description:
+    "大手町調査室九課が運営する本サイトのプライバシーポリシーです。取得する情報とGoogleアナリティクスの利用についてご案内します。",
+  path: "/privacy",
+});
 
 const APP = "https://ipo.finance-tower.com";
 
 export default function PrivacyPage() {
   return (
     <article>
+      <BreadcrumbJsonLd title="プライバシーポリシー" path="/privacy" />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         プライバシーポリシー
       </h1>

@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
 import { H2, P } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "時代の変化を、チャンスに変える会社を応援したい ― 大手町調査室九課をつくった理由|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "時代の変化を、チャンスに変える会社を応援したい ― 大手町調査室九課をつくった理由",
+  description:
+    "大手町調査室九課はなぜこのサービスをつくったのか。会社法の研究から生まれた4つの想いをお伝えします。",
+  path: "/our-story",
+});
 
 export default function OurStoryPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="時代の変化を、チャンスに変える会社を応援したい ― 大手町調査室九課をつくった理由"
+        description="大手町調査室九課はなぜこのサービスをつくったのか。会社法の研究から生まれた4つの想いをお伝えします。"
+        path="/our-story"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         時代の変化を、チャンスに変える会社を応援したい ― 大手町調査室九課をつくった理由
       </h1>
@@ -63,7 +74,9 @@ export default function OurStoryPage() {
         大手町調査室九課は、投資の結果を約束するものではありません。判断の材料を、できるだけ誠実でわかりやすい形でお届けするサービスです。
       </P>
       <P>無料会員でも、毎月2銘柄は無料でご覧いただけます。まずは1銘柄、分析を見てみてください。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
+
+      <PrevNextNav current="/our-story" />
     </article>
   );
 }

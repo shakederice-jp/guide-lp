@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import { H2, P, UL, InlineLink } from "@/components/Prose";
+import { pageMetadata } from "@/lib/seo";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "運営者情報|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "運営者情報",
+  description: "IPO企業情報AI分析レポートを運営する「大手町調査室九課」についてご紹介します。",
+  path: "/about",
+});
 
 const APP = "https://ipo.finance-tower.com";
 
 export default function AboutPage() {
   return (
     <article>
+      <BreadcrumbJsonLd title="運営者情報" path="/about" />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         運営者情報
       </h1>

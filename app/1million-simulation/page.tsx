@@ -2,14 +2,25 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { H2, P, UL, Small, RelatedLinks } from "@/components/Prose";
 import { CtaButton, APP_URL } from "@/components/CtaButton";
+import { PrevNextNav } from "@/components/PrevNextNav";
+import { pageMetadata } from "@/lib/seo";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "IPOを公募価格で100万円買っていたら今いくら?シミュレーション機能|大手町調査室九課",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "IPOを公募価格で100万円買っていたら今いくら?シミュレーション機能",
+  description:
+    "IPO銘柄を公募価格で100万円買っていたら今いくらか。投資シミュレーション機能の使い方をご紹介します。",
+  path: "/1million-simulation",
+});
 
 export default function OneMillionSimulationPage() {
   return (
     <article>
+      <ArticleJsonLd
+        title="IPOを公募価格で100万円買っていたら今いくら?シミュレーション機能"
+        description="IPO銘柄を公募価格で100万円買っていたら今いくらか。投資シミュレーション機能の使い方をご紹介します。"
+        path="/1million-simulation"
+      />
       <h1 className="mb-6 font-heading text-3xl font-bold text-brand-tealDark">
         IPOを公募価格で100万円買っていたら今いくら?シミュレーション機能
       </h1>
@@ -21,7 +32,7 @@ export default function OneMillionSimulationPage() {
         「IPO企業情報AI分析レポート」には、公募価格で100万円投資したと仮定するシミュレーション機能があります。この記事では、その使い方をご紹介します。
       </P>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <H2>銘柄カードで誰でもすぐに確認できます</H2>
       <P>
@@ -79,7 +90,7 @@ export default function OneMillionSimulationPage() {
 
       <H2>実際にシミュレーションを見てみてください</H2>
       <P>無料会員登録は課金不要です。毎月2銘柄は、無料でご覧いただけます。</P>
-      <CtaButton href={APP_URL}>無料で分析を見てみる</CtaButton>
+      <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
       <RelatedLinks
         links={[
@@ -88,6 +99,8 @@ export default function OneMillionSimulationPage() {
           { href: "/investment-styles", label: "IPO投資はデイトレ・短期・長期でどう違う?" },
         ]}
       />
+
+      <PrevNextNav current="/1million-simulation" />
 
       <Small>
         本サイトの内容は、投資の勧誘や助言ではありません。判断材料の提供を目的としています。最終的な投資判断は、ご自身の責任でお願いします。
