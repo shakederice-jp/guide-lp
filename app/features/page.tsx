@@ -155,7 +155,7 @@ export default function FeaturesPage() {
 
       <H2>はじめやすさ</H2>
       <UL>
-        <Item href="/referral-program" label="友達紹介プログラム" tag="長い目で応援" desc="紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。" />
+        <Item href="/referral-program" label="友達紹介プログラム" tag="長い目で応援" desc="紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着300名限定)。" />
       </UL>
       <P>効果的な使い方は、次の4ステップです。</P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
@@ -192,7 +192,7 @@ export default function FeaturesPage() {
 
       <H2>気になる特徴から試してみてください</H2>
       <P>
-        無料会員登録は課金不要です。友達紹介では紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着100名限定)。
+        無料会員登録は課金不要です。友達紹介では紹介した方・紹介された方の両方が、2か月間どの銘柄も無料でご覧いただけます(先着300名限定)。
       </P>
       <CtaButton href={APP_URL}>分析ページへ</CtaButton>
 
