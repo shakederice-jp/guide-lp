@@ -56,7 +56,7 @@ export default function NineAxisMethodPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/chapter1-ultra-short.png"
+          src="/guide/chapter1-ultra-short.png"
           alt="流通比率と平均初値騰落率の関係を示すグラフ。流通比率が低いほど初値の上昇率が高い傾向をサンプルデータで例示している"
           width={730}
           height={414}
@@ -75,7 +75,7 @@ export default function NineAxisMethodPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/axis-detail-short.png"
+          src="/guide/axis-detail-short.png"
           alt="超短期・短期の軸別スコアカードの例。需給の軽さ・ロックアップ・上場タイミングと、バリュエーション・VCや大株主の売り圧力・成長性の評価が表示されている"
           width={1023}
           height={727}
@@ -94,7 +94,7 @@ export default function NineAxisMethodPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/axis-detail-long-quadrant.png"
+          src="/guide/axis-detail-long-quadrant.png"
           alt="長期の独自AIナインクロス試算マップの例。期待先行型・掘り出し物候補・慎重に見極めたい・堅実バリュー型の4象限でバリュー度とグロース度を示している"
           width={925}
           height={664}
@@ -106,7 +106,7 @@ export default function NineAxisMethodPage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/axis-detail-long-grades.png"
+          src="/guide/axis-detail-long-grades.png"
           alt="長期の軸別スコアカードの例。ユニットエコノミクス・競合環境・経営陣の評価がA〜Eのランクで表示されている"
           width={932}
           height={404}

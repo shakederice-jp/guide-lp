@@ -45,7 +45,7 @@ export default function DeepDive3PointsPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/deep-dive-accordion.png"
+          src="/guide/deep-dive-accordion.png"
           alt="無料公開の深掘り3要素アコーディオン。ビジネスモデル(儲けの仕組み)・上場までのストーリー・競合企業との違いの3項目が、折りたたみ形式で並んでいる"
           width={1041}
           height={394}

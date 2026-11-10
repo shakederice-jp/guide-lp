@@ -47,7 +47,7 @@ export default function AiAccuracyCheckPage() {
       <P>継続して公開することで、分析の精度を確かめていただけます。</P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/recent-ipo-results.png"
+          src="/guide/recent-ipo-results.png"
           alt="最近上場した銘柄(直近60日)の一覧。上場日・銘柄・市場・公募価格・初値・公募価格比が、良い結果もそうでない結果もそのまま並んでいる"
           width={859}
           height={486}
@@ -62,7 +62,7 @@ export default function AiAccuracyCheckPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/price-scenario-short.png"
+          src="/guide/price-scenario-short.png"
           alt="分析ページの株価シナリオ分析(短期)の例。強気・中立・弱気の3パターンを、それぞれの確率とあわせて示している"
           width={921}
           height={733}
@@ -74,7 +74,7 @@ export default function AiAccuracyCheckPage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/price-scenario-long.png"
+          src="/guide/price-scenario-long.png"
           alt="分析ページの株価シナリオ分析(長期)の例。数年先までの強気・中立・弱気の3パターンを、それぞれの確率とあわせて示している"
           width={1031}
           height={734}
@@ -86,7 +86,7 @@ export default function AiAccuracyCheckPage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/scenario-vs-actual.png"
+          src="/guide/scenario-vs-actual.png"
           alt="事前のAIシナリオと上場日終値実績を比べる答え合わせの例。公募価格・初値・上場日終値と公募価格比が並び、「まずここに注目」の見立てと実績が照らし合わされている"
           width={763}
           height={574}

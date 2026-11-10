@@ -41,7 +41,7 @@ export default function OneMillionSimulationPage() {
       <P>ログインや、追跡の手続きは必要ありません。</P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/simulation-cards.png"
+          src="/guide/simulation-cards.png"
           alt="IPO企業情報AI分析レポートの銘柄カード。各銘柄について、公募価格で100万円買っていたら現在いくらかの金額と騰落率が表示され、初心者向け分析・中・上級者向け分析のボタンが並んでいる"
           width={755}
           height={818}
@@ -58,7 +58,7 @@ export default function OneMillionSimulationPage() {
       </P>
       <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 712 }}>
         <Image
-          src="/simulation-100shares.png"
+          src="/guide/simulation-100shares.png"
           alt="分析ページの投資シミュレーション(100株購入の場合)の例。シナリオ別の試算額と、追跡開始ボタンが表示されている"
           width={712}
           height={713}

@@ -54,7 +54,7 @@ export default function EdinetAiAnalysisPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/ipo-key-figures-table.png"
+          src="/guide/ipo-key-figures-table.png"
           alt="目論見書から読み取った主要数値の表の例。上場日・市場・証券コード・業種・公募価格・初値・ロックアップ期間・主幹事がまとめて表示されている"
           width={1026}
           height={581}
@@ -74,7 +74,7 @@ export default function EdinetAiAnalysisPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/ai-summary-citations.png"
+          src="/guide/ai-summary-citations.png"
           alt="AI分析要約の例。本文からの引用データ根拠が一覧で示され、目論見書に記載がなかった項目はデータ不足として正直に示されている"
           width={1031}
           height={583}

@@ -49,7 +49,7 @@ export default function NineAxisFreeGuidePage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-ultra-short-summary.png"
+          src="/guide/reference-ultra-short-summary.png"
           alt="超短期投資家向け参考資料1の例。IPO条件・資金調達サマリーの表が、折りたたみなしで表示されている"
           width={933}
           height={750}
@@ -61,7 +61,7 @@ export default function NineAxisFreeGuidePage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-ultra-short-vc.png"
+          src="/guide/reference-ultra-short-vc.png"
           alt="需給・VC分析(流動性・ロックアップ・VC売却懸念)のドーナツグラフの例。株主構成と流通比率・ロックアップ・売り圧力がまとめて表示されている"
           width={1165}
           height={609}
@@ -73,7 +73,7 @@ export default function NineAxisFreeGuidePage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-nine-axis-radar.png"
+          src="/guide/reference-nine-axis-radar.png"
           alt="短期投資家向け参考資料2の例。9軸それぞれのスコアをレーダーチャートと一覧バーで示したパフォーマンス・レーダーが、折りたたみなしで表示されている"
           width={1032}
           height={736}
@@ -85,7 +85,7 @@ export default function NineAxisFreeGuidePage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-long-term-financials-revenue.png"
+          src="/guide/reference-long-term-financials-revenue.png"
           alt="長期投資家向け参考資料3の例。売上高・経常利益の推移グラフが、折りたたみなしで表示されている"
           width={948}
           height={587}
@@ -97,7 +97,7 @@ export default function NineAxisFreeGuidePage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/reference-long-term-financials-metrics.png"
+          src="/guide/reference-long-term-financials-metrics.png"
           alt="自己資本比率・ROE・PER・PBRなど主要経営指標の推移表と、株主構成の例。折りたたみなしで表示されている"
           width={940}
           height={757}

@@ -57,7 +57,7 @@ export default function InvestmentStylesPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/pricing-plans.png"
+          src="/guide/pricing-plans.png"
           alt="IPO企業情報AI分析レポートの料金プラン画面。超短期・短期・長期といった投資スタイル別の分析がどのプランでも読めることを示す案内と、無料会員・A分析見放題プラン・B分析見放題+通知プラン・C フルパックプランの4つが並んでいる"
           width={905}
           height={760}
@@ -74,7 +74,7 @@ export default function InvestmentStylesPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/deep-analysis-header.png"
+          src="/guide/deep-analysis-header.png"
           alt="分析ページのDEEP ANALYSIS見出し。初心者向け・中上級者向けの切り替えと超短期・短期・長期のグループ別スコアに続き、初値で売り抜けたい方・数週間から数ヶ月で利益を取りたい方・数年単位でじっくり育てたい方という投資スタイル診断の案内が表示されている"
           width={1008}
           height={748}
@@ -94,7 +94,7 @@ export default function InvestmentStylesPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/chapter3-long-term.png"
+          src="/guide/chapter3-long-term.png"
           alt="成長株IPOと市場平均の長期リターン比較グラフ。数年単位で保有した場合の伸びしろをサンプルデータで例示している"
           width={729}
           height={435}

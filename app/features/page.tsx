@@ -56,7 +56,7 @@ export default function FeaturesPage() {
       <CtaButton href={APP_URL}>分析ページへ</CtaButton>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/comparison-table.png"
+          src="/guide/comparison-table.png"
           alt="他のIPOサイトとの違いを示す比較表。上場日・公募価格・主幹事はどちらも対応している一方、AIスコア・A〜E評価、9軸詳細分析レポート、株価シナリオ(3パターン)、目論見書データ自動抽出、競合他社との財務比較、週次イベント通知メールは本サービスのみ対応と示されている"
           width={755}
           height={546}
@@ -68,7 +68,7 @@ export default function FeaturesPage() {
       </div>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/site-feature-cards.png"
+          src="/guide/site-feature-cards.png"
           alt="このサイトでできることを示す3つのカード。AIスコアリング(A〜E評価)・株価シナリオ(3パターン)・目論見書の要点を自動抽出、の3つが並んでいる"
           width={743}
           height={344}
@@ -125,7 +125,7 @@ export default function FeaturesPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/three-minute-card.png"
+          src="/guide/three-minute-card.png"
           alt="分析ページ冒頭の3分で分かる結論カード。銘柄名・AI総合評価(Cランクなど)に続き、注目点1・注目点2・AIの見立てが1つのカードにまとめて表示されている"
           width={1027}
           height={678}
@@ -142,7 +142,7 @@ export default function FeaturesPage() {
       </UL>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/weekly-calendar-view.png"
+          src="/guide/weekly-calendar-view.png"
           alt="IPO企業情報AI分析レポートのスケジュール画面。月間・週間を切り替えて見られるカレンダーに、経済指標や日銀の予定、IPO銘柄の番号が表示されている"
           width={785}
           height={520}
@@ -160,7 +160,7 @@ export default function FeaturesPage() {
       <P>効果的な使い方は、次の4ステップです。</P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/how-to-use-steps.png"
+          src="/guide/how-to-use-steps.png"
           alt="効果的な使い方を示す4つのステップ。STEP1カレンダーで上場スケジュールを確認、STEP2 AI要約で気になる銘柄をスクリーニング、STEP3 9軸レポートで投資判断を深める、STEP4通知設定でBB開始を見逃さない"
           width={751}
           height={647}

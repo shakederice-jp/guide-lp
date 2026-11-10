@@ -35,7 +35,7 @@ export default function LaunchPage() {
       <CtaButton href={APP_URL}>分析ページへ</CtaButton>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/top-page-calendar.png"
+          src="/guide/top-page-calendar.png"
           alt="IPO企業情報AI分析レポートのトップページ。IPOスケジュールのカレンダーと、上場スケジュール一覧表・初値の結果一覧・ロックアップ解除予定などのメニュー、料金プランの案内が表示されている"
           width={1077}
           height={605}
@@ -65,7 +65,7 @@ export default function LaunchPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/ipo-simulation-list.png"
+          src="/guide/ipo-simulation-list.png"
           alt="IPO企業情報AI分析レポートの銘柄一覧。上場済みの銘柄ごとに、公募価格で100万円買っていたら現在いくらかが表示されている画面"
           width={905}
           height={612}
@@ -91,7 +91,7 @@ export default function LaunchPage() {
       </P>
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/ipo-guide-hero.png"
+          src="/guide/ipo-guide-hero.png"
           alt="大手町調査室九課特別レポート「お宝銘柄を探せ。IPO投資で資産を増やす実践的法則」のバナー。超短期(初値狙い)・短期(1〜3ヶ月)・長期(数年〜)の3つのボタンが並んでいる"
           width={777}
           height={345}

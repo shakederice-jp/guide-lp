@@ -41,7 +41,7 @@ export default function LockupCountdownPage() {
       <P>これは、IPO銘柄に特有の需給面のリスクです。</P>
       <div className="my-6 mx-auto overflow-hidden rounded-2xl border border-brand-pale" style={{ maxWidth: 714 }}>
         <Image
-          src="/chapter2-lockup.png"
+          src="/guide/chapter2-lockup.png"
           alt="ロックアップ解除前後の典型的な株価推移を示すグラフ。公募価格を100として指数化し、解除時期にかけて株価が下がる傾向をサンプルデータで例示している"
           width={714}
           height={481}

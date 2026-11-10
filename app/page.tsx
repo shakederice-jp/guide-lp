@@ -77,7 +77,7 @@ export default function TopPage() {
 
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/top-simulation-results.png"
+          src="/guide/top-simulation-results.png"
           alt="投資シミュレーション実績の例。公募価格で100万円買っていたら現在いくらかを、銘柄ごとに損益つきで示している"
           width={1015}
           height={765}
@@ -115,7 +115,7 @@ export default function TopPage() {
 
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/top-calendar-wide.png"
+          src="/guide/top-calendar-wide.png"
           alt="IPOカレンダーの例。月間表示のスケジュールと、料金プラン・マーケットトレンドへのリンクが並んで表示されている"
           width={1432}
           height={715}
@@ -136,7 +136,7 @@ export default function TopPage() {
 
       <div className="my-6 overflow-hidden rounded-2xl border border-brand-pale">
         <Image
-          src="/top-schedule-list.png"
+          src="/guide/top-schedule-list.png"
           alt="IPO予定企業一覧の例。無料体験の案内と、各銘柄のAI分析要約が表示されている"
           width={1025}
           height={603}
