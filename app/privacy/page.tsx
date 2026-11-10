@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       </h1>
 
       <P>
-        大手町調査室九課(以下「当調査室九課」)は、本サイト(guide.finance-tower.com)における情報の取り扱いを以下のとおり定めます。
+        大手町調査室九課(以下「当調査室九課」)は、本サイト(finance-tower.com/guide)における情報の取り扱いを以下のとおり定めます。
       </P>
 
       <H2>1. 本サイトで取得する情報</H2>

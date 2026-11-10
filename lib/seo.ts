@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://guide.finance-tower.com";
+export const SITE_URL = "https://finance-tower.com/guide";
 export const SITE_NAME = "大手町調査室九課";
 export const SITE_TAGLINE = "IPO銘柄徹底分析の専門調査室";
 // このSEO一式を整備した日。各ページのJSON-LD dateModifiedの既定値に使う。
