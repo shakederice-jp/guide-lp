@@ -9,7 +9,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/about",
 });
 
-const APP = "https://ipo.finance-tower.com";
+const APP = "https://finance-tower.com/ipo-jp";
 
 export default function AboutPage() {
   return (

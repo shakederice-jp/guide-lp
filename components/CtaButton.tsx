@@ -20,4 +20,4 @@ export function CtaButton({
   );
 }
 
-export const APP_URL = "https://ipo.finance-tower.com";
+export const APP_URL = "https://finance-tower.com/ipo-jp";

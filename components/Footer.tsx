@@ -15,7 +15,7 @@ export function Footer() {
             プライバシーポリシー
           </Link>
           <a
-            href="https://ipo.finance-tower.com"
+            href="https://finance-tower.com/ipo-jp"
             className="hover:text-brand-teal"
           >
             IPO企業情報AI分析レポート
