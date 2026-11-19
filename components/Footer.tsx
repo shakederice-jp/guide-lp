@@ -20,6 +20,12 @@ export function Footer() {
           >
             IPO企業情報AI分析レポート
           </a>
+          <a
+            href="https://finance-tower.com/students"
+            className="hover:text-brand-teal"
+          >
+            大学生向け 人生設計・マネープラン入門
+          </a>
         </nav>
         <p>&copy; {new Date().getFullYear()} 大手町調査室九課</p>
       </div>
