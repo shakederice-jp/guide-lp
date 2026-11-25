@@ -6,6 +6,8 @@ const SISTER_SITES: [string, string][] = [
   ["IPO投資の教科書", "https://finance-tower.com/learn"],
   ["中学生・高校生のためのお金の流れ入門", "https://finance-tower.com/money-flow"],
   ["大学生向け 人生設計・マネープラン入門", "https://finance-tower.com/students"],
+  ["宇宙ビジネスの基礎知識", "https://finance-tower.com/space"],
+  ["未来の電力ビジネスの基礎知識", "https://finance-tower.com/power"],
   ["メモレバ(AIダイエット手帳)", "https://finance-tower.com/diet"],
   ["大手町調査室九課", "https://finance-tower.com"],
 ];
